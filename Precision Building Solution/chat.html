@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+.c-w-us {
+    position: fixed;
+    right: 10%;
+    bottom: 5%;
+    padding: 15px 20px;
+    background-color: rgb(65, 65, 209);
+    border-radius: 50px;
+    font-size: 1.1rem;
+    color: whitesmoke;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 0 10px black;
+}
+
+.c-w-us:hover {
+    background-color: rgb(172, 67, 67);
+    transform: scale(1.05);
+    transition: 0.3s ease;
+}
+
+.c-w-us i {
+    padding: 5px;
+}
+
+.chat-box {
+    display: none;
+    position: fixed;
+    background-color: rgb(105, 105, 240);
+    max-width: 350px;
+    width: 50%;
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: 71.6%;
+    box-shadow: 0 0 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 150px
+}
+
+.chat-form {
+    flex-direction: column;
+    gap: 15px;
+}
+
+.cancel {
+    align-self: flex-end;
+    cursor: pointer;
+    background-color: red;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    border: none;
+    color: white;
+    margin-left: 90%;
+}
+
+.head h3 {
+    font-size: 18px;
+    color: white;
+    text-align: center;
+}
+
+.head p {
+    font-size: 14px;
+    color: white;
+    text-align: center;
+}
+
+.body {
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.last {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+    margin-top: 20%;
+}
+
+.last input {
+    padding: 10px;
+    width: 94%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.last button {
+    padding: 10px;
+    background-color: rgb(83, 83, 99);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+.last button:hover {
+    background-color: rgb(12, 148, 80);
+    font-weight: bolder;
+}
+    </style>
+
+</head>
+<body>
+    <section>
+        <div class="chat-box" id="open-form">
+            <div class="chat-form">
+                <div><button class="cancel" id="cancel-form"><i class="fa-solid fa-xmark"></i></button></div>
+                <div class="head">
+                    <h3>I am offline, but still available <br>to assist via email.</h3>
+                    <hr>
+                    <p>Typically responds in under 4 hours</p>
+                </div>
+                <div class="body">
+                    <h3 class="one">Hi...<br>How can i help you?</h3>
+                    <div class="last"><input type="email" placeholder="Enter your message here" required>
+                        <button>Submit</button>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <br>
+        <a href="" class="c-w-us" id="chat-me" ><i class="fa-solid fa-comment-dots"></i>Chat With Us</a>
+    </section>
+
+    <script>
+        const chatMe = document.getElementById("chat-me");
+const openForm = document.getElementById("open-form");
+const cancelForm = document.getElementById("cancel-form");
+
+chatMe.addEventListener("click", function(event){
+    event.preventDefault();
+
+    chatMe.style.display = "none";
+    openForm.style.display = "block";
+});
+
+cancelForm.addEventListener("click", function(){
+    openForm.style.display = "none";
+    chatMe.style.display = "inline-block";
+});
+    </script>
+</body>
+</html>
+
+
+
+        
